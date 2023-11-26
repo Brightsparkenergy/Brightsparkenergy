@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Decision_On_Lead_Assignment</name>
+        <label>Decision On Lead Assignment</label>
+        <locationX>1219</locationX>
+        <locationY>693</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Solar_Commercial</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solar - Commercial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Solar_Commercial_record</targetReference>
+            </connector>
+            <label>Solar Commercial</label>
+        </rules>
+        <rules>
+            <name>Solar_Residential_South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solar - Residential</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Solar_Residential_record_South_west</targetReference>
+            </connector>
+            <label>Solar Residential &amp; South West</label>
+        </rules>
+        <rules>
+            <name>Solar_Residential_South_East_or_London</name>
+            <conditionLogic>(1 AND 2) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solar - Residential</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>London</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Solar_Residential_South_East_or_London</targetReference>
+            </connector>
+            <label>Solar Residential &amp; South East or London</label>
+        </rules>
+        <rules>
+            <name>Electrical_South_East</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Electrical</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Electrical_South_East</targetReference>
+            </connector>
+            <label>Electrical &amp; South East</label>
+        </rules>
+        <rules>
+            <name>Battery_Storage_South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Battery Storage</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Battery_Storage_South_West</targetReference>
+            </connector>
+            <label>Battery Storage &amp; South West</label>
+        </rules>
+        <rules>
+            <name>Battery_Storage_South_East_or_London</name>
+            <conditionLogic>(1 AND 2) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Battery Storage</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>London</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Battery_Storage_South_East_or_London</targetReference>
+            </connector>
+            <label>Battery Storage &amp; South East or London</label>
+        </rules>
+        <rules>
+            <name>Electrical_South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Electrical</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Electrical_South_West</targetReference>
+            </connector>
+            <label>Electrical &amp; South West</label>
+        </rules>
+        <rules>
+            <name>Electrical_South_East_or_London</name>
+            <conditionLogic>(1 AND 2) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Electrical</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>London</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Electrical_South_East_or_London</targetReference>
+            </connector>
+            <label>Electrical &amp; South East or London</label>
+        </rules>
+        <rules>
+            <name>EV_Charging_South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EV Charging</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_EV_Charging_South_West</targetReference>
+            </connector>
+            <label>EV Charging &amp; South West</label>
+        </rules>
+        <rules>
+            <name>Commercial_Lighting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Commercial Lighting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Commercial_Lighting</targetReference>
+            </connector>
+            <label>Commercial Lighting</label>
+        </rules>
+        <rules>
+            <name>Consultancy_Other</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Consultancy / Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Consultancy_Other</targetReference>
+            </connector>
+            <label>Consultancy/Other</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Lead Assignment rule {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Assignment rule</label>
+    <loops>
+        <name>Looping_users</name>
+        <label>Looping users</label>
+        <locationX>584</locationX>
+        <locationY>587</locationY>
+        <collectionReference>Get_Users</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Decision_On_Lead_Assignment</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Queues</name>
+        <label>Get Queues</label>
+        <locationX>584</locationX>
+        <locationY>371</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Users</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Bright_Spark_Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Users</name>
+        <label>Get Users</label>
+        <locationX>584</locationX>
+        <locationY>479</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Looping_users</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Battery_Storage_South_East_or_London</name>
+        <label>Update Battery Storage &amp; South East or London</label>
+        <locationX>1816</locationX>
+        <locationY>746</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Battery_Storage_South_West</name>
+        <label>Update Battery Storage &amp; South West</label>
+        <locationX>1754</locationX>
+        <locationY>811</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Grant</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Commercial_Lighting</name>
+        <label>Update Commercial Lighting</label>
+        <locationX>1731</locationX>
+        <locationY>499</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Consultancy_Other</name>
+        <label>Update Consultancy/Other</label>
+        <locationX>1984</locationX>
+        <locationY>552</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Electrical_South_East</name>
+        <label>Update Electrical &amp; South East</label>
+        <locationX>1464</locationX>
+        <locationY>803</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Electrical_South_East_or_London</name>
+        <label>Update Electrical &amp; South East or London</label>
+        <locationX>1882</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Electrical_South_West</name>
+        <label>Update Electrical &amp; South West</label>
+        <locationX>1876</locationX>
+        <locationY>686</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Saul</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_EV_Charging_South_West</name>
+        <label>Update EV Charging &amp; South West</label>
+        <locationX>1943</locationX>
+        <locationY>583</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Saul</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Solar_Commercial_record</name>
+        <label>Update Solar Commercial record</label>
+        <locationX>328</locationX>
+        <locationY>880</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Solar_Residential_record_South_west</name>
+        <label>Update Solar Residential record &amp; South west</label>
+        <locationX>936</locationX>
+        <locationY>803</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Identity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Solar - Residential</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Sales_Region__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>South West</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Grant</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Solar_Residential_South_East_or_London</name>
+        <label>Update Solar Residential &amp; South East or London</label>
+        <locationX>1200</locationX>
+        <locationY>803</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Mark_Stevenson</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>458</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_Queues</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Identity_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

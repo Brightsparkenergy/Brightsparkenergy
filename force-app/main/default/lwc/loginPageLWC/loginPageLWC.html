@@ -1,0 +1,28 @@
+<template>
+
+    <lightning-card title="BRIGHT SPARK ENERGY CUSTOMER LOGIN">
+        <div class="slds-grid slds-grid_vertical-stretch">
+            <div class="backgroundImage slds-size_1-of-2 slds-large-size_8-of-12">
+              <div>
+                
+                <div class="vertical-center" style="padding-top:10%;">
+            
+                  <p class="slds-text-heading_medium">
+                    Login With Your Registered Email ID
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-input label="Email" type="email" value={email} onchange={handleEmailChange}></lightning-input>
+            <lightning-input label="OTP" type="text" value={otp} onchange={handleOTPChange}></lightning-input>
+            <lightning-button label="Submit" onclick={validateOTP}></lightning-button>
+            <div if:true={verificationResult}>
+                <p>{verificationResultMessage}</p>
+            </div>
+        </div>
+    </lightning-card>
+
+</template>

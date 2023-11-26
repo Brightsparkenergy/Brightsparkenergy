@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>New_Lead</name>
+        <label>New Lead</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Welcome to Bright Spark Energy</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>body</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Automate Email to Customer After new Lead is Generated {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Automate Email to Customer After new Lead is Generated</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_Lead</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>body</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Dear {!$Record.FirstName} {!$Record.MiddleName} {!$Record.LastName},&lt;/p&gt;&lt;p&gt;Thank you for getting in contact with Bright Spark Energy. A member of our team will be in contact as soon as possible to discuss your renewable energy project.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Your enquiry is very important to us, and we aim to get in contact with you within two working days. We are an installation, not sales company so this may take a bit longer during very busy periods.&amp;nbsp;&lt;/p&gt;&lt;p&gt;In the interim you can contact our team via phone (Arundel Office 01903 443321 / Exeter Office 01392 799277) or via email (info@brightspark.energy).&lt;/p&gt;&lt;p&gt;Yours sincerely,&lt;/p&gt;&lt;p&gt;Mark Stevenson,&lt;/p&gt;&lt;p&gt;Managing Director.&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

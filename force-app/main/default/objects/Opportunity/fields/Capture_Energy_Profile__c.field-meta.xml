@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capture_Energy_Profile__c</fullName>
+    <externalId>false</externalId>
+    <label>Capture Energy Profile</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family with school-age children</fullName>
+                <default>false</default>
+                <label>Family with school-age children</label>
+            </value>
+            <value>
+                <fullName>Family with infants or pre-school children</fullName>
+                <default>false</default>
+                <label>Family with infants or pre-school children</label>
+            </value>
+            <value>
+                <fullName>Single or two person household</fullName>
+                <default>false</default>
+                <label>Single or two person household</label>
+            </value>
+            <value>
+                <fullName>Retirees or working from home</fullName>
+                <default>false</default>
+                <label>Retirees or working from home</label>
+            </value>
+            <value>
+                <fullName>Night time focused consumption</fullName>
+                <default>false</default>
+                <label>Night time focused consumption</label>
+            </value>
+            <value>
+                <fullName>Constant energy consumption</fullName>
+                <default>false</default>
+                <label>Constant energy consumption</label>
+            </value>
+            <value>
+                <fullName>Evening focused consumption</fullName>
+                <default>false</default>
+                <label>Evening focused consumption</label>
+            </value>
+            <value>
+                <fullName>Weekdays focused consumption</fullName>
+                <default>false</default>
+                <label>Weekdays focused consumption</label>
+            </value>
+            <value>
+                <fullName>commercial (Shopping hours)</fullName>
+                <default>false</default>
+                <label>commercial (Shopping hours)</label>
+            </value>
+            <value>
+                <fullName>Custom profile</fullName>
+                <default>false</default>
+                <label>Custom profile</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Solar - Commercial</controllingFieldValue>
+            <valueName>Constant energy consumption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Commercial</controllingFieldValue>
+            <valueName>Evening focused consumption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Commercial</controllingFieldValue>
+            <valueName>Weekdays focused consumption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Commercial</controllingFieldValue>
+            <valueName>commercial (Shopping hours)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Commercial</controllingFieldValue>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Custom profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Family with school-age children</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Family with infants or pre-school children</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Single or two person household</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Retirees or working from home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solar - Residential</controllingFieldValue>
+            <valueName>Night time focused consumption</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Existing Business</fullName>
+        <default>false</default>
+        <label>Existing Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Solar - Commercial</fullName>
+        <default>false</default>
+        <label>Solar - Commercial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Solar - Residential</fullName>
+        <default>false</default>
+        <label>Solar - Residential</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Battery Storage</fullName>
+        <default>false</default>
+        <label>Battery Storage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <label>Electrical</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EV Charging</fullName>
+        <default>false</default>
+        <label>EV Charging</label>
+    </standardValue>
+</StandardValueSet>

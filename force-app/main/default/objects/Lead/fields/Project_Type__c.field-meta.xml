@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Residential</fullName>
+                <default>false</default>
+                <label>Residential</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>Battery Storage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Battery Storage</label>
+            </value>
+            <value>
+                <fullName>Commercial Lighting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Lighting</label>
+            </value>
+            <value>
+                <fullName>Consultancy / Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consultancy / Other</label>
+            </value>
+            <value>
+                <fullName>EV Charging</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EV Charging</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Solar - Commercial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solar - Commercial</label>
+            </value>
+            <value>
+                <fullName>Solar - Residential</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solar - Residential</label>
+            </value>
+            <value>
+                <fullName>SolarCommercial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SolarCommercial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

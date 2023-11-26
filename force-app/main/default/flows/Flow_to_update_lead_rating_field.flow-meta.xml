@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Check_Identity_Type</name>
+        <label>Check Identity Type</label>
+        <locationX>974</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Solar_Commercial</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solar - Commercial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record</targetReference>
+            </connector>
+            <label>Solar – Commercial</label>
+        </rules>
+        <rules>
+            <name>Solar_Residential</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Solar - Residential</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record1</targetReference>
+            </connector>
+            <label>Solar – Residential</label>
+        </rules>
+        <rules>
+            <name>Electrical</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Electrical</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record3</targetReference>
+            </connector>
+            <label>Electrical</label>
+        </rules>
+        <rules>
+            <name>EV_Charging</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EV Charging</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record4</targetReference>
+            </connector>
+            <label>EV Charging</label>
+        </rules>
+        <rules>
+            <name>Consultancy_Other</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Consultancy / Other</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record5</targetReference>
+            </connector>
+            <label>Consultancy / Other</label>
+        </rules>
+        <rules>
+            <name>Battery_Storage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Battery Storage</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record6</targetReference>
+            </connector>
+            <label>Battery Storage</label>
+        </rules>
+        <rules>
+            <name>Commercial_lighting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Commercial Lighting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record7</targetReference>
+            </connector>
+            <label>Commercial lighting</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Flow update to {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow to update lead rating field</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Record</name>
+        <label>Update Record</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record1</name>
+        <label>Update Record</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record3</name>
+        <label>Update Record</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record4</name>
+        <label>Update Record</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Low</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record5</name>
+        <label>Update Record</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Low</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record6</name>
+        <label>Update Record</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Record7</name>
+        <label>Update Record</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Prioritization_of_Lead__c</field>
+            <value>
+                <stringValue>Low</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Identity_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Identity_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

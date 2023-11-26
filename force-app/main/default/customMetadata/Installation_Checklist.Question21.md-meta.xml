@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Question21</label>
+    <protected>false</protected>
+    <values>
+        <field>Installation_Question__c</field>
+        <value xsi:type="xsd:string">If they have a smart meter, check that it is reading some export as just about any system with export something.</value>
+    </values>
+    <values>
+        <field>Installation_Type__c</field>
+        <value xsi:type="xsd:string">After Installation</value>
+    </values>
+    <values>
+        <field>Installation__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Question__c</field>
+        <value xsi:type="xsd:string">If they have a smart meter, check that it is reading some export as just about any system with export something</value>
+    </values>
+    <values>
+        <field>S_No__c</field>
+        <value xsi:type="xsd:string">21</value>
+    </values>
+</CustomMetadata>

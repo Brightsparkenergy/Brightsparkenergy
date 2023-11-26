@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brochure_Sending_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISPICKVAL(Status,&quot;Estimate Sent&quot;),
+ISPICKVAL(Status,&quot;Converted&quot;),ISPICKVAL(Status,&quot;Closed - Not Converted&quot;)) &amp;&amp; Brochure_Send_Successfully__c = false</errorConditionFormula>
+    <errorMessage>Before proceeding to the next status, make sure to choose a brochure and then click the &quot;Send Brochures&quot; button.</errorMessage>
+</ValidationRule>

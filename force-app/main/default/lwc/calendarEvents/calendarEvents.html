@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Select the user to see events">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                value={selectedUserId}
+                options={userOptions}
+                onchange={handleUserChange}>
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+    <c-calendar selected-user-id={selectedUserId}></c-calendar>
+</template>

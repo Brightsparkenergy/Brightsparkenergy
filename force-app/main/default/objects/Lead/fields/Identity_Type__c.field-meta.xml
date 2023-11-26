@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Identity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solar - Commercial</fullName>
+                <default>false</default>
+                <label>Solar - Commercial</label>
+            </value>
+            <value>
+                <fullName>Solar - Residential</fullName>
+                <default>false</default>
+                <label>Solar - Residential</label>
+            </value>
+            <value>
+                <fullName>Battery Storage</fullName>
+                <default>false</default>
+                <label>Battery Storage</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>EV Charging</fullName>
+                <default>false</default>
+                <label>EV Charging</label>
+            </value>
+            <value>
+                <fullName>Commercial Lighting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Lighting</label>
+            </value>
+            <value>
+                <fullName>Consultancy / Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consultancy / Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

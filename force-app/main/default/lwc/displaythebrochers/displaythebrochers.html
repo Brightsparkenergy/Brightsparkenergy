@@ -1,0 +1,33 @@
+<template>
+    <div class="datatable-container">
+    <lightning-card title="Send Brochure to the Customer">
+        <div class="slds-m-around_medium">
+            <!--<lightning-layout multiple-rows>
+                <lightning-layout-item size="6" padding="around-small"></lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="search" label="Search Brochures" onchange={handleSearch}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>-->
+            <template if:true={data}>
+                <div class="datatable-spacing">
+                <lightning-datatable key-field="Id"
+                                     data={data} 
+                                     columns={projectColumns} 
+                                     show-checkbox-column="true"
+                                     show-row-number-column="true" 
+                                     
+                                     onrowselection={handleRowSelection}>
+                </lightning-datatable>
+            </div>
+            </template>
+            <template if:true={error}>
+                {error}>
+                
+            </template>      
+        </div>
+        <div class="button-spacing">
+                <lightning-button variant="brand" label="Send Brochure" onclick={handleButtonClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+    </lightning-card>
+    </div>
+</template>

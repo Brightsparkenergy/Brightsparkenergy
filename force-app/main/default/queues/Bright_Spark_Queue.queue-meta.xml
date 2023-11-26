@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Bright Spark Queue</name>
+    <queueMembers>
+        <users>
+            <user>grant@brightspark.energy</user>
+            <user>mark@brightspark.energy</user>
+            <user>saul@brightspark.energy</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

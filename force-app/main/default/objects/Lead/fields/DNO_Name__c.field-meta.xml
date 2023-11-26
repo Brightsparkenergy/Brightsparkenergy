@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DNO_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Distribution Network Operator</inlineHelpText>
+    <label>DNO Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>National Grid</fullName>
+                <default>false</default>
+                <label>National Grid</label>
+            </value>
+            <value>
+                <fullName>Northern Powergrid</fullName>
+                <default>false</default>
+                <label>Northern Powergrid</label>
+            </value>
+            <value>
+                <fullName>Electricity Northwest</fullName>
+                <default>false</default>
+                <label>Electricity Northwest</label>
+            </value>
+            <value>
+                <fullName>Scottish Power Energy Networks</fullName>
+                <default>false</default>
+                <label>Scottish Power Energy Networks</label>
+            </value>
+            <value>
+                <fullName>Scottish and Southern Electricity Networks</fullName>
+                <default>false</default>
+                <label>Scottish and Southern Electricity Networks</label>
+            </value>
+            <value>
+                <fullName>Independent DNO Operator</fullName>
+                <default>false</default>
+                <label>Independent DNO Operator</label>
+            </value>
+            <value>
+                <fullName>Electricity North West.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Electricity North West.</label>
+            </value>
+            <value>
+                <fullName>SP Energy Networks</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SP Energy Networks</label>
+            </value>
+            <value>
+                <fullName>SSEN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SSEN</label>
+            </value>
+            <value>
+                <fullName>UK Power Networks</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UK Power Networks</label>
+            </value>
+            <value>
+                <fullName>Western Power Distribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Western Power Distribution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

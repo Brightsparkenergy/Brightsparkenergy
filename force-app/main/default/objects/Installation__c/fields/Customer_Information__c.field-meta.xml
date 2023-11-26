@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Information__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Inform customer batteries may initially draw from the grid during the day as they&apos;ll likely do a &quot;balance&quot; charge. This can be a bit scary as the daily consumption will go up. If it lasts more than 1 day get the installer back.</inlineHelpText>
+    <label>Customer Information</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposed_Tech_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Proposed Tech Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>EV Charging</fullName>
+                <default>false</default>
+                <label>EV Charging</label>
+            </value>
+            <value>
+                <fullName>Battery Storage</fullName>
+                <default>false</default>
+                <label>Battery Storage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
